@@ -7,6 +7,7 @@ import {
   Code,
   Smartphone,
   Gauge,
+  ChevronDown
 } from "lucide-react";
 
 // Satu-satunya daftar ikon. Tambah ikon baru cukup di sini.
@@ -19,6 +20,7 @@ const icons = {
   Code,
   Smartphone,
   Gauge,
+  ChevronDown,
 };
 
 // Tipe diturunkan otomatis dari kunci kamus di atas.

@@ -1,11 +1,12 @@
-import { profile } from "@/data/profile";
-import Icon from "@/components/ui/Icon";
+import Sidebar from "@/components/layout/sidebar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="">{profile.name}</h1>
-      <Icon name="Mail" size={25} />
+    <div className="mx-auto flex max-w-6xl flex-col gap-6 p-4 md:flex-row md:items-start md:p-8">
+      <Sidebar />
+      <main className="flex-1 rounded-3xl border border-line bg-card p-5 md:p-8">
+        konten menyusul
+      </main>
     </div>
   );
 }
