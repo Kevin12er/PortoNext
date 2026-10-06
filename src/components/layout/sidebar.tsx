@@ -30,7 +30,7 @@ export default function Sidebar() {
           aria-expanded={open}
           aria-controls="sidebar-detail"
           aria-label={open ? "Sembunyikan kontak" : "Tampilkan kontak"}
-          className="grid size-10 place-items-center rounded-xl bg-card-soft text-accent md:hidden"
+          className="grid size-10  place-items-center rounded-xl bg-card-soft text-accent md:hidden cursor-pointer"
         >
           <Icon
             name="ChevronDown"
@@ -53,22 +53,22 @@ export default function Sidebar() {
             />
           ))}
         </ul>
-        {socials.length > 0 && (
-          <div className="mt-5 flex flex-wrap gap-4 text-xs text-dim">
-            {socials.map((s) => (
-              <a
-                key={s.name}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-accent"
-              >
-                {s.name}
-              </a>
-            ))}
-          </div>
-        )}
       </div>
+      {socials.length > 0 && (
+        <div className="mt-5 flex flex-wrap gap-4 text-xs text-dim">
+          {socials.map((s) => (
+            <a
+              key={s.name}
+              href={s.href}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-accent"
+            >
+              {s.name}
+            </a>
+          ))}
+        </div>
+      )}
     </aside>
   );
 }

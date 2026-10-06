@@ -6,6 +6,8 @@ import {
   PenTool,
   Code,
   Smartphone,
+  Palette,
+  Laptop,
   Gauge,
   ChevronDown
 } from "lucide-react";
@@ -21,6 +23,8 @@ const icons = {
   Smartphone,
   Gauge,
   ChevronDown,
+  Palette,
+  Laptop,
 };
 
 // Tipe diturunkan otomatis dari kunci kamus di atas.

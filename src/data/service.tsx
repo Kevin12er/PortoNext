@@ -1,20 +1,20 @@
-import { Palette, Laptop } from "lucide-react";
+import type { IconName } from "@/components/ui/Icon";
 
 export type Service = {
   title: string;
   description: string;
-  icon: "Palette" | "Laptop";
+  icon: IconName;
 };
 
 export const services: Service[] = [
   {
     title: "Web Design",
-    description: "Clean and user-friendly for UI design",
+    description: "Clean and user-friendly UI design",
     icon: "Palette",
   },
   {
     title: "Slicing UI/UX",
-    description: "Execute your own website design into a line of code",
+    description: "Turning your website design into clean, working code",
     icon: "Laptop",
-  }
+  },
 ];
