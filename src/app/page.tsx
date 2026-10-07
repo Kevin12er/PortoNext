@@ -8,10 +8,18 @@ import Contact from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-6 p-4 md:flex-row md:items-start md:p-8">
+    <div className="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 p-4 md:flex-row md:items-start md:p-8">
       <Sidebar />
-      <main className="flex-1 rounded-3xl border border-line bg-card p-5 md:p-8">
-        <MainPanel sections={{ About: <About />, Portfolio: <Portofolio />, Contact: <Contact />, Tools: <Techstack />, Resume: <Resume /> }} />
+      <main className="min-h-[calc(100vh-4rem)] flex-1 rounded-3xl border border-line bg-card p-5 md:p-8">
+        <MainPanel
+          sections={{
+            About: <About />,
+            Portfolio: <Portofolio />,
+            Contact: <Contact />,
+            Tools: <Techstack />,
+            Resume: <Resume />,
+          }}
+        />
       </main>
     </div>
   );

@@ -41,7 +41,7 @@ export default function Portofolio() {
           <button
             type="button"
             onClick={() => setIsDetailOpen(true)}
-            className="absolute bottom-3 cursor-pointer left-1/2 -translate-x-1/2 rounded-lg bg-card-soft px-4 py-2 text-sm font-medium text-accent"
+            className="absolute bottom-3 cursor-pointer left-1/2 -translate-x-1/2 rounded-lg bg-card-soft px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-background"
           >
             Lihat Detail
           </button>
