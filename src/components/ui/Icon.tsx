@@ -9,7 +9,9 @@ import {
   Palette,
   Laptop,
   Gauge,
-  ChevronDown
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 // Satu-satunya daftar ikon. Tambah ikon baru cukup di sini.
@@ -23,6 +25,8 @@ const icons = {
   Smartphone,
   Gauge,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Palette,
   Laptop,
 };
@@ -35,6 +39,7 @@ type IconProps = {
   size?: number;
   strokeWidth?: number;
   className?: string;
+  onClick?: () => void;
 };
 
 export default function Icon({
@@ -42,6 +47,7 @@ export default function Icon({
   size = 18,
   strokeWidth = 2,
   className,
+  onClick,
 }: IconProps) {
   const Component = icons[name];
 
@@ -53,6 +59,7 @@ export default function Icon({
       size={size}
       strokeWidth={strokeWidth}
       className={className}
+      onClick={onClick}
       aria-hidden="true"
     />
   );
