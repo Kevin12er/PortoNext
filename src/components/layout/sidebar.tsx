@@ -12,13 +12,13 @@ export default function Sidebar() {
   const socials = profile.socials.filter((s) => s.href.startsWith("http"));
 
   return (
-    <aside className="rounded-3xl border border-line bg-card p-5 md:sticky md:top-8 md:w-72 md:shrink-0 md:p-8">
+    <aside className="rounded-3xl border border-line bg-card p-5 md:sticky md:top-8 md:flex md:min-h-full md:w-72 md:shrink-0 md:flex-col md:p-8">
       <div className="flex items-center gap-4 md:flex-col md:text-center">
         <Avatar
           src="/images/profil.jpeg"
           alt="Foto Kevin Langga"
-          width={80}
-          height={100}
+          width={150}
+          height={190}
         />
         <div className="flex-1 md:flex-none">
           <h1 className="mb-1 text-lg font-medium">{profile.name}</h1>
@@ -55,7 +55,7 @@ export default function Sidebar() {
         </ul>
       </div>
       {socials.length > 0 && (
-        <div className="mt-5 flex flex-wrap gap-4 text-xs text-dim">
+        <div className="mt-auto pt-8 flex flex-wrap gap-4 text-xs text-dim">
           {socials.map((s) => (
             <a
               key={s.name}
