@@ -3,6 +3,7 @@ export const tabs = [
   "Resume",
   "Portfolio",
   "Contact",
+  "Tools"
 ] as const;
 export type TabName = (typeof tabs)[number];
 
