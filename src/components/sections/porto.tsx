@@ -7,6 +7,7 @@ import Icon from "../ui/Icon";
 
 export default function Portofolio() {
   const [index, setIndex] = useState(0);
+  const imageLength = learnBridgeImages.length
 
   return (
     <section>
@@ -30,12 +31,16 @@ export default function Portofolio() {
           <div className="flex justify-between">
             <Icon
               name="ChevronLeft"
-              onClick={() => setIndex(index - 1)}
+              onClick={() => setIndex(
+                index === 0 ? imageLength - 1 : index - 1
+              )}
               className="grid size-10  place-items-center rounded-xl bg-card-soft text-accent  cursor-pointer"
             />
             <Icon
               name="ChevronRight"
-              onClick={() => setIndex(index + 1)}
+              onClick={() => setIndex(
+                index === imageLength - 1 ? 0 : index + 1
+              )}
               className="grid size-10  place-items-center rounded-xl bg-card-soft text-accent  cursor-pointer"
             />
           </div>
