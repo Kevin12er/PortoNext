@@ -54,12 +54,12 @@ export default function MainPanel({ sections }: MainPanelProps) {
   }
 
   return (
-    <main className="relative flex-1 rounded-3xl border border-line bg-card p-5 md:p-8">
+    <div className="relative">
       <TabNav active={active} onChange={handleChange} />
 
       {sections[active] ?? (
         <p className="text-muted">{active} segera hadir.</p>
       )}
-    </main>
+    </div>
   );
 }
