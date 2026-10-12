@@ -12,6 +12,9 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
+  Eye,
+  ZoomIn,
+  X,
 } from "lucide-react";
 
 // Satu-satunya daftar ikon. Tambah ikon baru cukup di sini.
@@ -29,6 +32,9 @@ const icons = {
   ChevronRight,
   Palette,
   Laptop,
+  Eye,
+  ZoomIn,
+  X,
 };
 
 // Tipe diturunkan otomatis dari kunci kamus di atas.
