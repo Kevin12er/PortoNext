@@ -15,7 +15,7 @@ export default function Sidebar() {
     <aside className="rounded-3xl border border-line bg-card p-5 md:sticky md:top-8 md:flex md:min-h-full md:w-72 md:shrink-0 md:flex-col md:p-8">
       <div className="flex items-center gap-4 md:flex-col md:text-center">
         <Avatar
-          src="/images/profil.jpeg"
+          src="/images/profil.png"
           alt="Foto Kevin Langga"
           width={150}
           height={190}
