@@ -42,8 +42,9 @@ export const profile: Profile = {
     { name: "TikTok", href: "https://www.tiktok.com/@hehehew07" },
   ],
   about: [
-    "Hey i am Kevin langga, a junior web developer who start to build career as a fullstack software engineer",
-    "I am currently starting to learn several tech stacks for web development, such as React, Next.js, NestJS, Prisma ORM, and Postman",
-    "Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use",
+    "I am a junior fullstack engineer who values honest self-assessment and learning by building. This helps me grow quickly, ask for help early, and give realistic progress updates on real tasks.",
+    "As part of the Faculty phase of my RevoU program, I am building LearnBridge, a fullstack web application that helps teachers create learning materials and questions anytime, from anywhere. I have implemented automatic grading for multiple-choice questions, so teachers can see results immediately and follow each student's progress.",
+    "Before moving into tech, I worked in a coffee shop packaging orders, which taught me attention to detail. Through building LearnBridge, I developed technical skills in responsive, mobile-first frontend interfaces with Next.js, TypeScript, and Tailwind CSS, plus REST APIs with NestJS and Prisma ORM, testing endpoints in Postman.",
+    "With hands-on experience building a fullstack application and a habit of learning by doing, I am ready to contribute to a team and grow quickly through real-world work.",
   ],
 };

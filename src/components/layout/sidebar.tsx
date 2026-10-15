@@ -12,7 +12,7 @@ export default function Sidebar() {
   const socials = profile.socials.filter((s) => s.href.startsWith("http"));
 
   return (
-    <aside className="rounded-3xl border border-line bg-card p-5 md:sticky md:top-8 md:flex md:min-h-full md:w-72 md:shrink-0 md:flex-col md:p-8">
+    <aside className="rounded-3xl border border-line bg-card p-5 md:sticky md:top-8 md:flex md:h-fit md:w-72 md:shrink-0 md:flex-col md:p-8">
       <div className="flex items-center gap-4 md:flex-col md:text-center">
         <Avatar
           src="/images/profil.png"
@@ -55,7 +55,7 @@ export default function Sidebar() {
         </ul>
       </div>
       {socials.length > 0 && (
-        <div className="mt-auto pt-8 flex flex-wrap gap-4 text-xs text-dim">
+        <div className="mt-6 border-t border-line/40 pt-5 flex flex-wrap gap-4 text-xs text-dim">
           {socials.map((s) => (
             <a
               key={s.name}

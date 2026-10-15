@@ -8,7 +8,7 @@ export default function About() {
     <section>
       <SectionTitle>About Me</SectionTitle>
 
-      <div className="space-y-4 font-light text-muted">
+      <div className="space-y-2.5 text-sm md:text-base text-muted leading-relaxed">
         {profile.about.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

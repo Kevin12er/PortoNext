@@ -2,6 +2,10 @@ import SectionTitle from "@/components/ui/section-title";
 
 const education = [
   {
+    title: "RevoU Fullstack Software Engineer",
+    period: "2026",
+  },
+  {
     title: "Sarjanawiyata Tamansiswa University of Yogyakarta",
     period: "2016 — 2021",
   },
@@ -14,6 +18,7 @@ const experiences = [
       "Managed incoming and outgoing packages.",
       "Scanned items to ensure accurate package processing.",
       "Ensured packages were ready to be shipped to their destinations.",
+      "delivery the package to the customer",
     ],
   },
   {
@@ -22,13 +27,16 @@ const experiences = [
       "Weighed coffee beans according to production requirements.",
       "Cleaned and sorted coffee beans.",
       "Packaged coffee products for distribution.",
+      "ensuring that every package of coffee beans is on the correct shipping route",
     ],
   },
   {
-    title: "BATAN Cleaning Service",
+    title: "Teacher Internship at SMP N 2 Sewon Bantul of yogyakarta",
     points: [
-      "Cleaned and maintained the sports building.",
-      "Maintained and cleaned the surrounding building grounds.",
+      "taking student attendance in class",
+      "preparing learning materials in accordance with the available curriculum",
+      "delivering lessons and teaching students in the classroom in accordance with the established curriculum and prepared materials",
+      "Assigning tasks to students in class",
     ],
   },
 ];
@@ -44,7 +52,7 @@ export default function Resume() {
 
         <div className="relative ml-2 border-l border-line pl-8">
           {education.map((item) => (
-            <div key={item.title} className="relative pb-2">
+            <div key={item.title} className="relative pb-8 last:pb-2">
               <span className="absolute -left-9.5 top-1.5 size-4 rounded-full bg-accent" />
 
               <h3 className="text-lg font-semibold md:text-xl">
