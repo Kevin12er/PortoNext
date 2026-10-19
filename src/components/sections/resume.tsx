@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/ui/section-title";
+import Icon from "@/components/ui/Icon";
 
 const education = [
   {
@@ -45,6 +46,19 @@ export default function Resume() {
   return (
     <section>
       <SectionTitle>Resume</SectionTitle>
+
+      <div className="mb-6 mt-3 flex flex-wrap items-center justify-between gap-4">
+        <a
+          href="/Kevin-Langga.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl border border-line bg-card-soft px-4 py-2.5 text-xs font-semibold text-accent transition hover:border-accent hover:bg-accent hover:text-background md:text-sm"
+        >
+          <Icon name="FileText" size={16} />
+          <span>Lihat Resume (PDF)</span>
+          <Icon name="ExternalLink" size={14} />
+        </a>
+      </div>
 
       {/* Education */}
       <div className="mt-10">

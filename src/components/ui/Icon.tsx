@@ -17,6 +17,7 @@ import {
   X,
   ExternalLink,
   FolderCode,
+  FileText,
 } from "lucide-react";
 
 function GithubIcon({
@@ -61,6 +62,7 @@ const icons = {
   X,
   ExternalLink,
   FolderCode,
+  FileText,
   Github: GithubIcon,
 };
 
