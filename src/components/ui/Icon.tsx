@@ -18,6 +18,11 @@ import {
   ExternalLink,
   FolderCode,
   FileText,
+  Server,
+  Database,
+  ShieldCheck,
+  Layout,
+  TestTube,
 } from "lucide-react";
 
 function GithubIcon({
@@ -63,6 +68,11 @@ const icons = {
   ExternalLink,
   FolderCode,
   FileText,
+  Server,
+  Database,
+  ShieldCheck,
+  Layout,
+  TestTube,
   Github: GithubIcon,
 };
 

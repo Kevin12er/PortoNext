@@ -27,4 +27,24 @@ export const projects: Project[] = [
     liveUrl: "https://www.learnbridge.fun/",
     githubUrl: "https://github.com/Kevin12er",
   },
+  {
+    id: "revoshop",
+    title: "RevoShop",
+    category: "E-Commerce App",
+    description:
+      "Full-stack e-commerce platform featuring product listings, detailed product views, shopping cart management, a dedicated dashboard for item updates, category-based related products, and seamless client-side navigation.",
+    tech: ["Next.js", "React", "Tailwind CSS", "React Icons"],
+    liveUrl: "https://milestone-3-kevin12er-ylzm.vercel.app/",
+    githubUrl: "https://github.com/Revou-FSSE-Feb26/milestone-3-Kevin12er",
+  },
+  {
+    id: "revofun",
+    title: "RevoFun",
+    category: "Interactive Games",
+    description:
+      "A collection of interactive web-based games including Whack-a-Mole, Typing Game, Guess Number, Rock-Paper-Scissors, and Memory Card Game, featuring real-time timers, score tracking, and responsive design.",
+    tech: ["HTML", "Tailwind CSS", "JavaScript"],
+    liveUrl: "https://revou-fsse-feb26.github.io/milestone-2-Kevin12er/",
+    githubUrl: "https://github.com/Revou-FSSE-Feb26/milestone-2-Kevin12er",
+  },
 ];
