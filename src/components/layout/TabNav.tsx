@@ -1,10 +1,4 @@
-export const tabs = [
-  "About",
-  "Resume",
-  "Portfolio",
-  "Contact",
-  "Tools"
-] as const;
+export const tabs = ["About", "Portfolio", "Contact", "Tools"] as const;
 export type TabName = (typeof tabs)[number];
 
 type TabNavProps = {
