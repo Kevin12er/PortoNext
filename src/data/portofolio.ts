@@ -6,6 +6,8 @@ export type Project = {
   tech: string[];
   liveUrl?: string;
   githubUrl?: string;
+  docsUrl?: string;
+  schemaUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -25,6 +27,8 @@ export const projects: Project[] = [
       "PostgreSQL",
     ],
     liveUrl: "https://www.learnbridge.fun/",
+    docsUrl: "https://crack-be-kevin12er-production.up.railway.app/api/docs",
+    schemaUrl: "https://dbdiagram.io/d/6a62dfbf067336e1dee4986f",
     githubUrl: "https://github.com/Kevin12er",
   },
   {

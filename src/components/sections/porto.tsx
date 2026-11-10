@@ -66,23 +66,49 @@ export default function Portofolio() {
                   className="inline-flex items-center gap-2 text-muted transition hover:text-accent"
                 >
                   <Icon name="Github" size={16} />
-                  <span>View on GitHub</span>
+                  <span>GitHub</span>
                 </a>
               ) : (
                 <div />
               )}
 
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-semibold text-accent transition hover:underline"
-                >
-                  <span>Live Website</span>
-                  <Icon name="ExternalLink" size={14} />
-                </a>
-              )}
+              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
+                {project.docsUrl && (
+                  <a
+                    href={project.docsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold text-accent transition hover:underline"
+                  >
+                    <span>API Docs</span>
+                    <Icon name="ExternalLink" size={14} />
+                  </a>
+                )}
+
+                {project.schemaUrl && (
+                  <a
+                    href={project.schemaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold text-accent transition hover:underline"
+                  >
+                    <span>DB Schema</span>
+                    <Icon name="ExternalLink" size={14} />
+                  </a>
+                )}
+
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold text-accent transition hover:underline"
+                  >
+                    <span>Live Demo</span>
+                    <Icon name="ExternalLink" size={14} />
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}
