@@ -23,6 +23,7 @@ import {
   ShieldCheck,
   Layout,
   TestTube,
+  Rocket,
 } from "lucide-react";
 
 function GithubIcon({
@@ -73,6 +74,7 @@ const icons = {
   ShieldCheck,
   Layout,
   TestTube,
+  Rocket,
   Github: GithubIcon,
 };
 

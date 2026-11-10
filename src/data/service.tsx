@@ -37,4 +37,10 @@ export const services: Service[] = [
       "Writing automated tests and verifying core business logic to ensure code quality, reliability, and maintainability.",
     icon: "TestTube",
   },
+  {
+    title: "Deployment & Hosting",
+    description:
+      "Deploying and managing production web applications with CI/CD workflows on platforms like Vercel and cloud services.",
+    icon: "Rocket",
+  },
 ];

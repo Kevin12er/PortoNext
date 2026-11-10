@@ -3,7 +3,7 @@ import ServiceCard from "@/components/ui/service-card";
 import { services } from "@/data/service";
 
 const highlights = [
-  "Fullstack Development",
+  "Backend Developer",
   "REST APIs & Databases",
   "High Attention to Detail",
   "Learning by Building",
@@ -20,7 +20,7 @@ export default function About() {
           <p className="text-base font-normal text-foreground/95 md:text-lg">
             I am a{" "}
             <span className="font-semibold text-foreground">
-              junior fullstack engineer
+              junior Backend developer
             </span>{" "}
             who values honest self-assessment and{" "}
             <span className="font-medium text-accent">
