@@ -24,6 +24,7 @@ import {
   Layout,
   TestTube,
   Rocket,
+  Upload,
 } from "lucide-react";
 
 function GithubIcon({
@@ -75,6 +76,7 @@ const icons = {
   Layout,
   TestTube,
   Rocket,
+  Upload,
   Github: GithubIcon,
 };
 

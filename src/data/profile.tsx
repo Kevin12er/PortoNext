@@ -22,7 +22,7 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Kevin Langga",
-  role: "Junior Web Developer",
+  role: "Junior Backend Developer",
   contacts: [
     { label: "email", value: "kikoirfan45@gmail.com", icon: "Mail" },
     { label: "phone", value: "085842503952", icon: "Phone" },
