@@ -69,25 +69,25 @@ export default function Resume() {
         </a>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-3xl border border-line bg-card-soft/60 p-5 md:p-6">
-          <h2 className="mb-7 text-2xl font-semibold text-foreground">
+      <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
+        <div className="rounded-3xl border border-line bg-card-soft/60 p-4 sm:p-5 lg:p-6">
+          <h2 className="mb-5 sm:mb-7 text-xl sm:text-2xl font-semibold text-foreground">
             Education
           </h2>
 
-          <div className="relative ml-2 border-l border-line pl-7">
+          <div className="relative border-l border-line pl-6">
             {education.map((item) => (
-              <div key={item.title} className="relative pb-8 last:pb-0">
-                <span className="absolute -left-[1.9rem] top-1.5 size-3 rounded-full border-2 border-card bg-accent shadow-[0_0_0_4px_rgba(121,92,255,0.12)]" />
+              <div key={item.title} className="relative pb-6 sm:pb-8 last:pb-0">
+                <span className="absolute left-[-16gpx] top-2 size-4 rounded-full border-2 border-card bg-accent shadow-[0_0_0_4px_rgba(121,92,255,0.12)]" />
 
                 <div className="rounded-2xl border border-line bg-card px-4 py-4 shadow-sm">
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
                     {item.period}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold leading-snug md:text-xl">
+                  <h3 className="mt-2 text-base sm:text-lg font-semibold leading-snug">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                  <p className="mt-2 sm:mt-3 text-sm leading-relaxed text-muted">
                     {item.description}
                   </p>
                 </div>
@@ -96,30 +96,30 @@ export default function Resume() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-line bg-card-soft/60 p-5 md:p-6">
-          <h2 className="mb-7 text-2xl font-semibold text-foreground">
+        <div className="rounded-3xl border border-line bg-card-soft/60 p-4 sm:p-5 lg:p-6">
+          <h2 className="mb-5 sm:mb-7 text-xl sm:text-2xl font-semibold text-foreground">
             Experience
           </h2>
 
-          <div className="relative ml-2 border-l border-line pl-7">
+          <div className="relative border-l border-line pl-6">
             {experiences.map((experience) => (
-              <div key={experience.title} className="relative pb-8 last:pb-0">
-                <span className="absolute -left-[1.9rem] top-1.5 size-3 rounded-full border-2 border-card bg-accent shadow-[0_0_0_4px_rgba(121,92,255,0.12)]" />
+              <div key={experience.title} className="relative pb-6 sm:pb-8 last:pb-0">
+                <span className="absolute left-[-16px] top-2 size-4 rounded-full border-2 border-card bg-accent shadow-[0_0_0_4px_rgba(121,92,255,0.12)]" />
 
                 <div className="rounded-2xl border border-line bg-card px-4 py-4 shadow-sm">
-                  <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
-                    <h3 className="text-lg font-semibold leading-snug md:text-xl">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <h3 className="text-base sm:text-lg font-semibold leading-snug">
                       {experience.title}
                     </h3>
-                    <span className="text-xs font-medium uppercase tracking-[0.16em] text-dim">
+                    <span className="text-xs font-medium uppercase tracking-[0.16em] text-dim whitespace-nowrap">
                       {experience.period}
                     </span>
                   </div>
 
-                  <ul className="mt-4 space-y-2.5 text-sm text-muted">
+                  <ul className="mt-3 sm:mt-4 space-y-2 text-sm text-muted">
                     {experience.points.map((point) => (
-                      <li key={point} className="relative pl-5 leading-relaxed">
-                        <span className="absolute left-0 top-[0.7rem] size-1.5 rounded-full bg-accent" />
+                      <li key={point} className="relative pl-4 leading-relaxed">
+                        <span className="absolute left-0 top-[0.65rem] size-1.5 rounded-full bg-accent" />
                         {point}
                       </li>
                     ))}
