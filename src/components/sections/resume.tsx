@@ -78,7 +78,7 @@ export default function Resume() {
           <div className="relative border-l border-line pl-6">
             {education.map((item) => (
               <div key={item.title} className="relative pb-6 sm:pb-8 last:pb-0">
-                <span className="absolute left-[-16gpx] top-2 size-4 rounded-full border-2 border-card bg-accent shadow-[0_0_0_4px_rgba(121,92,255,0.12)]" />
+                <span className="absolute left-[-16px] top-2 size-4 rounded-full border-2 border-card bg-accent shadow-[0_0_0_4px_rgba(121,92,255,0.12)]" />
 
                 <div className="rounded-2xl border border-line bg-card px-4 py-4 shadow-sm">
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
