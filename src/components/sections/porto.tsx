@@ -57,22 +57,20 @@ export default function Portofolio() {
             </div>
 
             {/* Footer Links */}
-            <div className="mt-6 flex items-center justify-between border-t border-line/60 pt-4 text-xs font-medium">
+            <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-t border-line/60 pt-4 text-xs font-medium">
               {project.githubUrl ? (
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-muted transition hover:text-accent"
+                  className="inline-flex items-center gap-2.5 text-muted transition hover:text-accent whitespace-nowrap"
                 >
                   <Icon name="Github" size={16} />
                   <span>GitHub</span>
                 </a>
-              ) : (
-                <div />
-              )}
+              ) : null}
 
-              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
+              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3 w-full sm:w-auto">
                 {project.docsUrl && (
                   <a
                     href={project.docsUrl}
@@ -93,6 +91,18 @@ export default function Portofolio() {
                     className="inline-flex items-center gap-1.5 font-semibold text-accent transition hover:underline"
                   >
                     <span>DB Schema</span>
+                    <Icon name="ExternalLink" size={14} />
+                  </a>
+                )}
+
+                {project.prdUrl && (
+                  <a
+                    href={project.prdUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-semibold text-accent transition hover:underline"
+                  >
+                    <span>PRD</span>
                     <Icon name="ExternalLink" size={14} />
                   </a>
                 )}

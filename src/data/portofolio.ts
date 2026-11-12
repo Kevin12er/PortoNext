@@ -8,6 +8,7 @@ export type Project = {
   githubUrl?: string;
   docsUrl?: string;
   schemaUrl?: string;
+  prdUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -27,9 +28,10 @@ export const projects: Project[] = [
       "PostgreSQL",
     ],
     liveUrl: "https://www.learnbridge.fun/",
+    githubUrl: "https://github.com/Kevin12er/learnbridge",
     docsUrl: "https://crack-be-kevin12er-production.up.railway.app/api/docs",
     schemaUrl: "https://dbdiagram.io/d/6a62dfbf067336e1dee4986f",
-    githubUrl: "https://github.com/Kevin12er",
+    prdUrl: "https://drive.google.com/file/d/1jmhUheUohZRcQgqp_sYDKkUnre-nWYr2/view?usp=drive_link",
   },
   {
     id: "revoshop",
