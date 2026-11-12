@@ -25,6 +25,8 @@ import {
   TestTube,
   Rocket,
   Upload,
+  User,
+  Wrench,
 } from "lucide-react";
 
 function GithubIcon({
@@ -78,6 +80,8 @@ const icons = {
   Rocket,
   Upload,
   Github: GithubIcon,
+  User,
+  Wrench,
 };
 
 // Tipe diturunkan otomatis dari kunci kamus di atas.
