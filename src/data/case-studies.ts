@@ -12,7 +12,7 @@ export type CaseStudy = {
     title: string;
     points: string[];
   };
-  capabilities: {
+  capabilities?: {
     title: string;
     points: string[];
   };
@@ -149,20 +149,6 @@ export const caseStudies: CaseStudy[] = [
         "Rock Paper Scissors - Algorithmic opponent logic paired with round tracking and winning streak calculations.",
         "Number Guessing - Binary-search style deductive reasoning puzzle with dynamic range indicators and validation bounds.",
         "Whack a Mole - Reflex arcade test featuring randomized pop-up intervals and collision detection under time pressure.",
-      ],
-    },
-    capabilities: {
-      title: "Technical Stack",
-      points: [
-        "Vanilla JavaScript (ES6+)",
-        "Native DOM Event Architecture",
-        "High-Resolution Timers",
-        "HTML5 Semantic Structure",
-        "CSS3 Grid & Flexbox",
-        "Custom Theme Variables",
-        "Deterministic State Machines",
-        "LocalStorage Score Tracking",
-        "Responsive Coordinate Mapping",
       ],
     },
     techStack: {

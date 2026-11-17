@@ -23,7 +23,7 @@ export default async function CaseStudyPage({
     <section className="mx-auto max-w-3xl px-4 py-8 md:py-12">
       <nav className="mb-6 flex items-center gap-2 text-sm text-muted">
         <a
-          href="/"
+          href="/#portofolio"
           className="hover:text-accent transition"
         >
           Kembali ke Portofolio
@@ -79,16 +79,18 @@ export default async function CaseStudyPage({
         </section>
 
         {/* Key Capabilities */}
-        <section>
-          <h2 className="mb-3 text-xl font-semibold text-foreground">
-            {cs.capabilities.title}
-          </h2>
-          <ul className="space-y-2 text-sm text-muted leading-relaxed list-disc pl-6">
-            {cs.capabilities.points.map((p, i) => (
-              <li key={i}>{p}</li>
-            ))}
-          </ul>
-        </section>
+        {cs.capabilities && (
+          <section>
+            <h2 className="mb-3 text-xl font-semibold text-foreground">
+              {cs.capabilities.title}
+            </h2>
+            <ul className="space-y-2 text-sm text-muted leading-relaxed list-disc pl-6">
+              {cs.capabilities.points.map((p, i) => (
+                <li key={i}>{p}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Tech Stack */}
         <section>
