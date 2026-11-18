@@ -27,6 +27,8 @@ import {
   Upload,
   User,
   Wrench,
+  AlertTriangle,
+  Zap,
 } from "lucide-react";
 
 function GithubIcon({
@@ -79,9 +81,11 @@ const icons = {
   TestTube,
   Rocket,
   Upload,
-  Github: GithubIcon,
   User,
   Wrench,
+  AlertTriangle,
+  Zap,
+  Github: GithubIcon,
 };
 
 // Tipe diturunkan otomatis dari kunci kamus di atas.
