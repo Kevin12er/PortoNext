@@ -31,7 +31,7 @@ export default function TabNav({ active, onChange }: TabNavProps) {
       {/* Smooth gradient mask container for mobile scrolling content */}
       <div className="pointer-events-none absolute inset-x-0 -top-12 h-12 bg-gradient-to-t from-background/90 via-background/40 to-transparent md:hidden" />
 
-      <div className="p-2 md:p-0">
+      <div className="p-1.5 md:p-0">
         <div className="flex items-center gap-1 rounded-2xl border border-line bg-card-soft/80 p-1 backdrop-blur-sm md:gap-2 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none">
           {tabs.map((tab) => {
             const isActive = active === tab;
@@ -41,7 +41,7 @@ export default function TabNav({ active, onChange }: TabNavProps) {
                 type="button"
                 onClick={() => onChange(tab)}
                 aria-current={isActive ? "page" : undefined}
-                className={`group relative flex flex-1 items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200 md:px-4 md:py-3 md:text-base ${
+                className={`group relative flex flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1.5 py-2 text-[10px] font-medium transition-all duration-200 md:flex-row md:gap-2 md:px-4 md:py-3 md:text-base ${
                   isActive
                     ? "bg-card text-accent shadow-sm"
                     : "text-muted hover:text-foreground hover:bg-card/60"
@@ -49,10 +49,10 @@ export default function TabNav({ active, onChange }: TabNavProps) {
               >
                 <Icon
                   name={tabIcons[tab]}
-                  size={18}
-                  className={`transition-colors ${isActive ? "text-accent" : "text-dim group-hover:text-foreground"}`}
+                  size={16}
+                  className={`transition-colors md:size-[18px] ${isActive ? "text-accent" : "text-dim group-hover:text-foreground"}`}
                 />
-                <span className={isActive ? "text-accent" : ""}>{tab}</span>
+                <span className={`truncate ${isActive ? "text-accent" : ""}`}>{tab}</span>
                 {isActive && (
                   <span className="absolute -bottom-1 left-1/2 hidden size-1 -translate-x-1/2 rounded-full bg-accent md:block" />
                 )}
