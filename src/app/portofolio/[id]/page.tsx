@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCaseStudy, caseStudies } from "@/data/case-studies";
 import SectionTitle from "@/components/ui/section-title";
@@ -22,12 +23,12 @@ export default async function CaseStudyPage({
   return (
     <section className="mx-auto max-w-3xl px-4 py-8 md:py-12">
       <nav className="mb-6 flex items-center gap-2 text-sm text-muted">
-        <a
-          href="/#portofolio"
+        <Link
+          href="/#portfolio"
           className="hover:text-accent transition"
         >
           Kembali ke Portofolio
-        </a>
+        </Link>
         <span>/</span>
         <span className="text-foreground">{cs.title}</span>
       </nav>

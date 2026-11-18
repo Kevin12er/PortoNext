@@ -22,7 +22,12 @@ function hashToTab(hash: string): TabName {
 }
 
 export default function MainPanel({ sections }: MainPanelProps) {
-  const [active, setActive] = useState<TabName>("About");
+  const [active, setActive] = useState<TabName>(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      return hashToTab(window.location.hash);
+    }
+    return "About";
+  });
 
   useEffect(() => {
     if (window.location.hash) {

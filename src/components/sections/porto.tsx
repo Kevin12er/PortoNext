@@ -57,7 +57,7 @@ export default function Portofolio() {
             </div>
 
             {/* Footer Links */}
-            <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-t border-line/60 pt-4 text-xs font-medium">
+            <div className="mt-6 flex items-center justify-between gap-3 border-t border-line/60 pt-4 text-xs font-medium">
               {project.githubUrl ? (
                 <a
                   href={project.githubUrl}
@@ -70,63 +70,13 @@ export default function Portofolio() {
                 </a>
               ) : null}
 
-              <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3 w-full sm:w-auto">
-                <a
-                  href={`/portofolio/${project.id}`}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
-                >
-                  <span>Studi Kasus</span>
-                  <Icon name="ExternalLink" size={12} />
-                </a>
-
-                {project.docsUrl && (
-                  <a
-                    href={project.docsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
-                  >
-                    <span>API Docs</span>
-                    <Icon name="ExternalLink" size={12} />
-                  </a>
-                )}
-
-                {project.schemaUrl && (
-                  <a
-                    href={project.schemaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
-                  >
-                    <span>DB Schema</span>
-                    <Icon name="ExternalLink" size={12} />
-                  </a>
-                )}
-
-                {project.prdUrl && (
-                  <a
-                    href={project.prdUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
-                  >
-                    <span>PRD</span>
-                    <Icon name="ExternalLink" size={12} />
-                  </a>
-                )}
-
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
-                  >
-                    <span>Live Demo</span>
-                    <Icon name="ExternalLink" size={12} />
-                  </a>
-                )}
-              </div>
+              <a
+                href={`/portofolio/${project.id}`}
+                className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
+              >
+                <span>Studi Kasus</span>
+                <Icon name="ExternalLink" size={12} />
+              </a>
             </div>
           </article>
         ))}

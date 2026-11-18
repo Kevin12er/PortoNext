@@ -74,6 +74,9 @@ export const caseStudies: CaseStudy[] = [
       "By enforcing structured foundational checkpoints and eliminating manual grading bottlenecks, LearnBridge allows teachers to focus on targeted student interventions rather than repetitive paperwork, while providing students with clear, confidence-building milestone progression.",
     links: [
       { label: "Live Demo", url: "https://www.learnbridge.fun/" },
+      { label: "API Docs", url: "https://crack-be-kevin12er-production.up.railway.app/api/docs" },
+      { label: "DB Schema", url: "https://dbdiagram.io/d/6a62dfbf067336e1dee4986f" },
+      { label: "PRD", url: "https://drive.google.com/file/d/1jmhUheUohZRcQgqp_sYDKkUnre-nWYr2/view?usp=drive_link" },
       { label: "Frontend GitHub", url: "https://github.com/Kevin12er/crack-fe-Kevin12er.git" },
       { label: "Backend GitHub", url: "https://github.com/Kevin12er/crack-be-Kevin12er.git" },
     ],
