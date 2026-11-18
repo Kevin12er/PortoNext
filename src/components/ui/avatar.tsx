@@ -10,12 +10,12 @@ type AvatarProps = {
 export default function Avatar({
   src,
   alt,
-  width = 120,
-  height = 140,
+  width = 160,
+  height = 200,
 }: AvatarProps) {
   return (
     <div
-      className="overflow-hidden rounded-3xl bg-card-soft"
+      className="overflow-hidden rounded-2xl border border-line bg-card-soft shadow-sm"
       style={{ width, height }}
     >
       <Image
@@ -23,7 +23,7 @@ export default function Avatar({
         alt={alt}
         width={width}
         height={height}
-        className="size-full object-cover"
+        className="size-full object-cover transition-transform duration-500 hover:scale-105"
         priority
       />
     </div>

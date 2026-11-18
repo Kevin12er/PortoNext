@@ -15,9 +15,9 @@ export default function About() {
       <SectionTitle>About Me</SectionTitle>
 
       {/* Main Bio Card */}
-      <div className="mt-6 rounded-2xl border border-line bg-card-soft p-5 md:p-7">
-        <div className="space-y-4 text-sm leading-relaxed text-muted md:text-base">
-          <p className="text-base font-normal text-foreground/95 md:text-lg">
+      <div className="rounded-2xl border border-line bg-card p-8 shadow-sm">
+        <div className="space-y-5 text-[15px] leading-[1.7] text-muted">
+          <p className="text-lg font-normal leading-relaxed text-foreground/95">
             I am a{" "}
             <span className="font-semibold text-foreground">
               junior Backend developer
@@ -26,8 +26,8 @@ export default function About() {
             <span className="font-medium text-accent">
               learning by building
             </span>
-            . This helps me grow quickly, ask for help early, and give realistic
-            progress updates on real tasks.
+            . This helps me grow quickly, ask for help early, and give
+            realistic progress updates on real tasks.
           </p>
 
           <p>
@@ -35,8 +35,8 @@ export default function About() {
             <span className="font-semibold text-foreground">LearnBridge</span>,
             a fullstack web application that helps teachers create learning
             materials and questions anytime, from anywhere. I have implemented
-            automatic grading for multiple-choice questions, so teachers can see
-            results immediately and follow each student&apos;s progress.
+            automatic grading for multiple-choice questions, so teachers can
+            see results immediately and follow each student&apos;s progress.
           </p>
 
           <p>
@@ -46,16 +46,16 @@ export default function About() {
             mobile-first frontend interfaces with{" "}
             <span className="font-medium text-foreground">
               Next.js, TypeScript, and Tailwind CSS
-            </span>
+            </span>{" "}
             , plus REST APIs with{" "}
             <span className="font-medium text-foreground">
               NestJS and Prisma ORM
-            </span>
+            </span>{" "}
             , testing endpoints in{" "}
             <span className="font-medium text-foreground">Postman</span>.
           </p>
 
-          <p className="border-l-2 border-accent pl-4 font-normal text-foreground/90 italic">
+          <p className="border-l-2 border-accent pl-4 font-normal text-foreground/85 italic">
             &ldquo;With hands-on experience building a fullstack application and
             a habit of learning by doing, I am ready to contribute to a team and
             grow quickly through real-world work.&rdquo;
@@ -63,11 +63,11 @@ export default function About() {
         </div>
 
         {/* Highlight Badges */}
-        <div className="mt-6 flex flex-wrap gap-2 border-t border-line/60 pt-5">
+        <div className="mt-7 flex flex-wrap gap-2 border-t border-line pt-6">
           {highlights.map((tag) => (
             <span
               key={tag}
-              className="rounded-lg border border-line/70 bg-card px-3 py-1.5 text-xs font-medium text-dim transition hover:border-accent hover:text-accent"
+              className="rounded-full border border-line bg-card-soft px-3.5 py-1.5 text-xs font-medium text-muted transition-all hover:border-accent/40 hover:text-accent"
             >
               {tag}
             </span>
@@ -76,11 +76,11 @@ export default function About() {
       </div>
 
       {/* What I'm Doing Section */}
-      <div className="mb-5 mt-10">
-        <h3 className="text-xl font-bold tracking-tight text-foreground md:text-2xl">
+      <div className="mb-6 mt-12">
+        <h3 className="font-serif-display text-xl font-medium tracking-tight text-foreground">
           What I&apos;m Doing
         </h3>
-        <p className="mt-1 text-sm text-muted">
+        <p className="mt-1.5 text-sm text-muted">
           Core technical competencies and development focus areas.
         </p>
       </div>

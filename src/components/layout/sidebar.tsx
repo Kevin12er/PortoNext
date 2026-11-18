@@ -12,63 +12,83 @@ export default function Sidebar() {
   const socials = profile.socials.filter((s) => s.href.startsWith("http"));
 
   return (
-    <aside className="rounded-3xl border border-line bg-card p-5 md:sticky md:top-8 md:flex md:h-fit md:w-72 md:shrink-0 md:flex-col md:p-8">
-      <div className="flex items-center gap-4 md:flex-col md:text-center">
-        <Avatar
-          src="/images/profil.png"
-          alt="Foto Kevin Langga"
-          width={150}
-          height={190}
-        />
-        <div className="flex-1 md:flex-none">
-          <h1 className="mb-1 text-lg font-medium">{profile.name}</h1>
-          <Badge>{profile.role}</Badge>
+    <aside className="w-full md:sticky md:top-8 md:w-80 md:shrink-0">
+      <div className="sticky top-4 z-40 rounded-3xl border border-line bg-card/90 p-8 backdrop-blur-md md:static md:bg-card md:backdrop-blur-none shadow-sm">
+        {/* Profile header */}
+        <div className="flex flex-col items-center text-center">
+          <div className="relative">
+            <Avatar
+              src="/images/profil.png"
+              alt="Foto Kevin Langga"
+              width={160}
+              height={200}
+            />
+            <span className="absolute -bottom-1.5 -right-1.5 size-4 rounded-full border-2 border-card bg-accent shadow-sm" />
+          </div>
+          <h1 className="mt-5 font-serif-display text-2xl font-medium tracking-tight text-foreground">
+            {profile.name}
+          </h1>
+          <div className="mt-2">
+            <Badge>{profile.role}</Badge>
+          </div>
         </div>
+
+        {/* Contact details — always visible on desktop, collapsible on mobile */}
+        <div
+          id="sidebar-detail"
+          className={`mt-6 block border-t border-line pt-6 md:mt-7 md:pt-7 ${open ? "" : "hidden"}`}
+        >
+          <ul className="grid gap-3.5">
+            {profile.contacts.map((contact) => (
+              <ContactItem
+                key={contact.label}
+                icon={contact.icon}
+                label={contact.label}
+                value={contact.value}
+              />
+            ))}
+          </ul>
+        </div>
+
+        {/* Social links */}
+        {socials.length > 0 && (
+          <div className="mt-7 border-t border-line pt-6">
+            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-dim">
+              Connect
+            </p>
+            <div className="flex flex-wrap gap-x-5 gap-y-2">
+              {socials.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
+                >
+                  <span className="transition-transform group-hover:-translate-y-0.5">
+                    {s.name}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Mobile toggle */}
         <button
           type="button"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls="sidebar-detail"
           aria-label={open ? "Sembunyikan kontak" : "Tampilkan kontak"}
-          className="grid size-10  place-items-center rounded-xl bg-card-soft text-accent md:hidden cursor-pointer"
+          className="mt-5 grid size-10 w-full place-items-center rounded-xl bg-card-soft text-muted transition-colors hover:text-accent md:hidden"
         >
           <Icon
             name="ChevronDown"
-            className={`transition-transform ${open ? "rotate-180" : ""}`}
+            className={`size-5 transition-transform ${open ? "rotate-180" : ""}`}
           />
         </button>
       </div>
-
-      <div
-        id="sidebar-detail"
-        className={`${open ? "block" : "hidden"} mt-5 border-t border-line pt-5 md:mt-6 md:block md:pt-6`}
-      >
-        <ul className="grid gap-4">
-          {profile.contacts.map((contact) => (
-            <ContactItem
-              key={contact.label}
-              icon={contact.icon}
-              label={contact.label}
-              value={contact.value}
-            />
-          ))}
-        </ul>
-      </div>
-      {socials.length > 0 && (
-        <div className="mt-6 border-t border-line/40 pt-5 flex flex-wrap gap-4 text-xs text-dim">
-          {socials.map((s) => (
-            <a
-              key={s.name}
-              href={s.href}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-accent"
-            >
-              {s.name}
-            </a>
-          ))}
-        </div>
-      )}
     </aside>
   );
 }

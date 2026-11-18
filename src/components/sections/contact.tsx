@@ -9,7 +9,6 @@ export default function Contact() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
     setStatus("Sending...");
 
     const form = event.currentTarget;
@@ -19,7 +18,6 @@ export default function Contact() {
       "access_key",
       process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "",
     );
-
     formData.append("subject", "New message from portfolio");
     formData.append("from_name", "Portfolio Contact Form");
 
@@ -28,7 +26,6 @@ export default function Contact() {
         method: "POST",
         body: formData,
       });
-
       const data = await response.json();
 
       if (data.success) {
@@ -46,26 +43,21 @@ export default function Contact() {
     <section>
       <SectionTitle>Contact</SectionTitle>
 
-      <div className="mt-6 grid gap-8 md:grid-cols-2">
-        {/* Left — Call to Action */}
-        <div className="flex flex-col justify-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-            Let&apos;s work <span className="text-accent">together!</span>
+      <div className="mt-8 rounded-3xl border border-line bg-card p-8 shadow-sm">
+        <div className="mb-8">
+          <h2 className="font-serif-display text-2xl font-medium tracking-tight text-foreground md:text-3xl">
+            Let&apos;s work <span className="text-accent">together</span>
           </h2>
-          <p className="text-sm leading-relaxed text-muted md:text-base">
+          <p className="mt-2 text-sm leading-relaxed text-muted md:text-base">
             Have a project in mind, a question, or just want to say hi? Drop me
             a message and I&apos;ll get back to you as soon as possible.
           </p>
         </div>
 
-        {/* Right — Form */}
-        <div className="rounded-2xl border border-line bg-card-soft p-5">
-          <form onSubmit={handleSubmit} className="flex h-full flex-col gap-4">
+        <form onSubmit={handleSubmit} className="grid gap-5">
+          <div className="grid gap-5 md:grid-cols-2">
             <div className="space-y-1.5">
-              <label
-                htmlFor="name"
-                className="text-sm font-medium text-foreground"
-              >
+              <label htmlFor="name" className="text-xs font-semibold uppercase tracking-[0.1em] text-dim">
                 Name
               </label>
               <input
@@ -74,15 +66,11 @@ export default function Contact() {
                 type="text"
                 placeholder="Your name"
                 required
-                className="w-full rounded-xl border border-line bg-card px-4 py-3 text-sm text-foreground outline-none placeholder:text-dim focus:border-accent"
+                className="w-full rounded-xl border border-line bg-card-soft px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-accent"
               />
             </div>
-
             <div className="space-y-1.5">
-              <label
-                htmlFor="email"
-                className="text-sm font-medium text-foreground"
-              >
+              <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.1em] text-dim">
                 Email
               </label>
               <input
@@ -91,43 +79,41 @@ export default function Contact() {
                 type="email"
                 placeholder="you@example.com"
                 required
-                className="w-full rounded-xl border border-line bg-card px-4 py-3 text-sm text-foreground outline-none placeholder:text-dim focus:border-accent"
+                className="w-full rounded-xl border border-line bg-card-soft px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-accent"
               />
             </div>
+          </div>
 
-            <div className="flex flex-1 flex-col space-y-1.5">
-              <label
-                htmlFor="message"
-                className="text-sm font-medium text-foreground"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message..."
-                required
-                className="w-full flex-1 resize-none rounded-xl border border-line bg-card px-4 py-3 text-sm text-foreground outline-none placeholder:text-dim focus:border-accent"
-              />
-            </div>
+          <div className="space-y-1.5">
+            <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.1em] text-dim">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message..."
+              required
+              rows={4}
+              className="w-full resize-none rounded-xl border border-line bg-card-soft px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-accent"
+            />
+          </div>
 
-            <div className="flex items-center gap-3">
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 rounded-xl border border-line bg-card px-5 py-3 text-sm font-semibold text-accent transition hover:bg-accent hover:text-background"
-              >
-                <Icon name="Mail" size={16} />
-                Send Message
-              </button>
+          <div className="flex items-center gap-4">
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 rounded-xl border border-accent bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:bg-transparent hover:text-accent"
+            >
+              <Icon name="Mail" size={16} />
+              Send Message
+            </button>
 
-              {status && (
-                <p className="text-sm text-muted" role="status">
-                  {status}
-                </p>
-              )}
-            </div>
-          </form>
-        </div>
+            {status && (
+              <p className="text-sm text-muted" role="status">
+                {status}
+              </p>
+            )}
+          </div>
+        </form>
       </div>
     </section>
   );

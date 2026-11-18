@@ -8,9 +8,9 @@ import Contact from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-screen max-w-[1400px] flex-col gap-6 p-4 md:flex-row md:items-start md:p-6">
+    <div className="mx-auto flex min-h-screen max-w-[1500px] flex-col gap-8 p-6 md:flex-row md:items-start md:p-10">
       <Sidebar />
-      <main className="min-h-[calc(100vh-4rem)] flex-1 rounded-3xl border border-line bg-card p-5 md:p-8">
+      <main className="min-h-[calc(100vh-3.5rem)] flex-1 rounded-3xl border border-line bg-card p-8 md:p-12">
         <MainPanel
           sections={{
             About: <About />,

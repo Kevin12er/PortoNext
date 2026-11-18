@@ -1,17 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #121214; /* latar halaman */
-  --card: #1e1e22; /* kotak sidebar dan panel utama */
-  --card-soft: #26262b; /* kotak kecil di dalam kartu */
-  --line: #383840; /* garis tepi */
-  --foreground: #ffffff; /* teks utama (judul) */
-  --muted: #d6d6d6; /* teks paragraf */
-  --dim: #9a9aa3; /* teks label kecil */
-  --accent: #ffdb70; /* warna aksen (emas) */
-  --radius: 20px; /* sudut membulat kartu */
-  --font-jakarta: "Plus Jakarta Sans", system-ui, sans-serif;
+  --background: #F8F6F2;
+  --card: #FFFFFF;
+  --card-soft: #F5EEE8;
+  --line: #DED8CE;
+  --line-soft: #E8E2D8;
+  --foreground: #252321;
+  --muted: #625B54;
+  --dim: #767068;
+  --accent: #B84A32;
+  --accent-soft: #FBEAE4;
+  --accent-foreground: #252321;
+  --radius: 16px;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
 }
 
 @theme inline {
@@ -20,21 +24,49 @@
   --color-card: var(--card);
   --color-card-soft: var(--card-soft);
   --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
   --color-muted: var(--muted);
   --color-dim: var(--dim);
   --color-accent: var(--accent);
-  --font-sans: var(--font-jakarta);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
+/* Subtle ambient backdrop */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-jakarta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* Text selection */
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Serif display utility */
+.font-serif-display {
+  font-family: var(--font-serif);
+  font-feature-settings: "ss01" 1, "cv01" 1;
 }

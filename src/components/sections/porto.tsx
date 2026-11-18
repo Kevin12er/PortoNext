@@ -8,33 +8,32 @@ export default function Portofolio() {
   return (
     <section>
       <SectionTitle>Portofolio</SectionTitle>
-
       <p className="mt-3 text-sm text-muted md:text-base leading-relaxed">
         A selection of things I&apos;ve designed, built, and shipped.
       </p>
 
-      <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <article
             key={project.id}
-            className="group flex flex-col justify-between rounded-2xl border border-line bg-card-soft p-5 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/5 md:p-6"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5"
           >
-            <div>
+            <div className="flex flex-1 flex-col p-6">
               {/* Header: Icon & Category */}
               <div className="flex items-center justify-between gap-3">
-                <span className="grid size-11 place-items-center rounded-xl border border-line/70 bg-card text-accent transition-transform duration-300 group-hover:scale-105">
+                <span className="grid size-11 place-items-center rounded-xl border border-line bg-card-soft text-accent transition-transform duration-300 group-hover:scale-105">
                   <Icon name="FolderCode" size={22} />
                 </span>
 
                 {project.category && (
-                  <span className="rounded-full border border-accent/25 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                  <span className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                     {project.category}
                   </span>
                 )}
               </div>
 
               {/* Title */}
-              <h3 className="mt-4 text-lg font-bold tracking-tight text-foreground transition-colors group-hover:text-accent md:text-xl">
+              <h3 className="mt-4 font-serif-display text-lg font-medium leading-snug tracking-tight text-foreground transition-colors group-hover:text-accent">
                 {project.title}
               </h3>
 
@@ -48,7 +47,7 @@ export default function Portofolio() {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="rounded-lg border border-line/60 bg-card px-2.5 py-1 text-xs font-medium text-dim"
+                    className="rounded-lg border border-line bg-card-soft px-2.5 py-1 text-xs font-medium text-dim"
                   >
                     {t}
                   </span>
@@ -57,22 +56,23 @@ export default function Portofolio() {
             </div>
 
             {/* Footer Links */}
-            <div className="mt-6 flex items-center justify-between gap-3 border-t border-line/60 pt-4 text-xs font-medium">
+            <div className="flex items-center justify-between gap-3 border-t border-line bg-card-soft/50 px-6 py-4">
               {project.githubUrl ? (
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 text-muted transition hover:text-accent whitespace-nowrap"
+                  className="inline-flex items-center gap-2 text-xs font-medium text-muted transition-colors hover:text-accent"
                 >
                   <Icon name="Github" size={16} />
                   <span>GitHub</span>
                 </a>
-              ) : null}
-
+              ) : (
+                <span />
+              )}
               <a
                 href={`/portofolio/${project.id}`}
-                className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-accent hover:text-accent hover:bg-accent/5"
+                className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-accent/40 hover:text-accent"
               >
                 <span>Studi Kasus</span>
                 <Icon name="ExternalLink" size={12} />

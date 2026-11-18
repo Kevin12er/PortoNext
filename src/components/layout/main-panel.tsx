@@ -13,34 +13,27 @@ function tabToHash(tab: TabName) {
 
 function hashToTab(hash: string): TabName {
   const value = hash.replace("#", "").toLowerCase();
-
   const tab = tabs.find(
     (item) => item.toLowerCase() === value
   );
-
   return tab ?? "About";
 }
 
 export default function MainPanel({ sections }: MainPanelProps) {
-  const [active, setActive] = useState<TabName>(() => {
-    if (typeof window !== "undefined" && window.location.hash) {
-      return hashToTab(window.location.hash);
-    }
-    return "About";
-  });
+  const [active, setActive] = useState<TabName>("About");
 
   useEffect(() => {
+    // Only update state after mount to avoid hydration mismatch
     if (window.location.hash) {
       setActive(hashToTab(window.location.hash));
     }
 
     const handleHashChange = () => {
       setActive(hashToTab(window.location.hash));
-      window.scrollTo({ top: 0 });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     window.addEventListener("hashchange", handleHashChange);
-
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
     };
@@ -48,23 +41,23 @@ export default function MainPanel({ sections }: MainPanelProps) {
 
   function handleChange(tab: TabName) {
     setActive(tab);
-
     window.history.replaceState(
       null,
       "",
       `#${tabToHash(tab)}`
     );
-
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return (
     <div className="relative">
       <TabNav active={active} onChange={handleChange} />
 
-      {sections[active] ?? (
-        <p className="text-muted">{active} segera hadir.</p>
-      )}
+      <div className="mt-8">
+        {sections[active] ?? (
+          <p className="text-muted">{active} segera hadir.</p>
+        )}
+      </div>
     </div>
   );
 }

@@ -23,7 +23,7 @@ const techStacks = [
   { name: "JavaScript", icon: siJavascript, color: "#F7DF1E" },
   { name: "TypeScript", icon: siTypescript, color: "#3178C6" },
   { name: "React", icon: siReact, color: "#61DAFB" },
-  { name: "Next.js", icon: siNextdotjs, color: "#FFFFFF" },
+  { name: "Next.js", icon: siNextdotjs, color: "#000000" },
   { name: "Tailwind CSS", icon: siTailwindcss, color: "#06B6D4" },
   { name: "Node.js", icon: siNodedotjs, color: "#5FA04E" },
   { name: "Nest.js", icon: siNestjs, color: "#E0234E" },
@@ -38,36 +38,24 @@ export default function Techstack() {
     <section>
       <SectionTitle>Tools</SectionTitle>
 
-      <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {techStacks.map((tech) => (
           <div
             key={tech.name}
-            className="group relative flex flex-col items-center justify-center gap-3.5 rounded-2xl border border-line bg-card-soft p-5 transition-all duration-300 hover:scale-[1.03] hover:border-accent/60 hover:shadow-lg"
+            className="group flex items-center gap-3.5 rounded-xl border border-line bg-card p-4 transition-all duration-300 hover:border-accent/30 hover:bg-card-soft"
           >
-            {/* Glowing Icon Wrapper */}
-            <div className="relative flex size-14 items-center justify-center rounded-xl border border-line/70 bg-card transition-transform duration-300 group-hover:scale-110">
-              {/* Ambient colored light bloom */}
-              <div
-                className="absolute inset-0 rounded-xl opacity-20 blur-md transition-opacity duration-300 group-hover:opacity-60"
-                style={{ backgroundColor: tech.color }}
-              />
-
-              {/* Glowing Brand SVG Logo */}
+            <div className="grid size-10 shrink-0 place-items-center rounded-lg border border-line bg-card-soft">
               <svg
                 role="img"
                 viewBox="0 0 24 24"
-                className="relative size-8 transition-all duration-300"
-                style={{
-                  fill: tech.color,
-                  filter: `drop-shadow(0 0 7px ${tech.color}aa)`,
-                }}
+                className="size-5 transition-transform duration-300 group-hover:scale-110"
+                style={{ fill: tech.color }}
                 aria-label={tech.name}
               >
                 <path d={tech.icon.path} />
               </svg>
             </div>
-
-            <p className="text-center text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+            <p className="text-sm font-medium text-foreground transition-colors group-hover:text-accent">
               {tech.name}
             </p>
           </div>
