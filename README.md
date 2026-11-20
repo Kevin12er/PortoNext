@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio: Kevin Langga
 
-## Getting Started
+## About Me
+I am a junior fullstack engineer who values honest self-assessment and learning by building. This helps me grow quickly, ask for help early, and give realistic progress updates on real tasks.
 
-First, run the development server:
+Before moving into tech, I worked in a coffee shop packaging orders, which taught me attention to detail. Through building projects like LearnBridge, I developed technical skills in responsive, mobile-first frontend interfaces with Next.js, TypeScript, and Tailwind CSS, plus REST APIs with NestJS and Prisma ORM, testing endpoints in Postman.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+With hands-on experience building fullstack applications and a habit of learning by doing, I am ready to contribute to a team and grow quickly through real-world work.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact
+- Email: kikoirfan45@gmail.com
+- Phone: 085842503952
+- Location: Yogyakarta, Indonesia
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Socials
+- [Github](https://github.com/Kevin12er)
+- [LinkedIn](https://www.linkedin.com/in/kevin-langga-a0303a355/)
+- [Instagram](https://www.instagram.com/eatbiscuits9?stkn=d2huczByM2tjb2tu@utm_source=gr)
+- [TikTok](https://www.tiktok.com/@hehehew07)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technical Services
+*   **REST API Development:** Building scalable, structured backend services and RESTful APIs using NestJS, Node.js, and Postman for testing.
+*   **Database Modeling:** Designing efficient relational database schemas, relations, and migrations with PostgreSQL and Prisma ORM.
+*   **Authentication & Authorization:** Implementing secure user auth workflows, JWT token validation, password hashing, and role-based access control.
+*   **Responsive Web Design:** Crafting mobile-first, pixel-perfect, and interactive interfaces using Next.js, React, and Tailwind CSS.
+*   **Unit Testing:** Writing automated tests and verifying core business logic to ensure code quality, reliability, and maintainability.
+*   **Deployment & Hosting:** Deploying and managing production web applications with CI/CD workflows on platforms like Vercel and cloud services.
 
-## Learn More
+## Featured Projects
 
-To learn more about Next.js, take a look at the following resources:
+### 1. LearnBridge
+*Mastery-based practice exercise LMS for vocational high school students.*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Overview:** A mastery-based learning management platform designed to connect instructors and students in one interactive experience.
+- **Tech Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS, NestJS, PostgreSQL, Prisma ORM.
+- **Key Features:** Mandatory bridge checkpoints, automatic grading, teacher analytics dashboard.
+- **Links:** [Live Demo](https://www.learnbridge.fun/), [API Docs](https://crack-be-kevin12er-production.up.railway.app/api/docs), [DB Schema](https://dbdiagram.io/d/6a62dfbf067336e1dee4986f), [PRD](https://drive.google.com/file/d/1jmhUheUohZRcQgqp_sYDKkUnre-nWYr2/view?usp=drive_link), [Frontend GitHub](https://github.com/Kevin12er/crack-fe-Kevin12er.git), [Backend GitHub](https://github.com/Kevin12er/crack-be-Kevin12er.git)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. RevoShop
+*Modern e-commerce storefront.*
 
-## Deploy on Vercel
+- **Overview:** A production-ready e-commerce web application developed with Next.js 16 and React 19.
+- **Tech Stack:** Next.js 16, React 19, Tailwind CSS.
+- **Key Features:** Zero-reload navigation, persistent shopping cart, product management dashboard.
+- **Links:** [Live Demo](https://milestone-3-kevin12er-ylzm.vercel.app/), [GitHub](https://github.com/Revou-FSSE-Feb26/milestone-3-Kevin12er.git)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. RevoFun
+*Interactive arcade games.*
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Overview:** A browser-based arcade featuring five functional web games built with vanilla JavaScript.
+- **Tech Stack:** Vanilla JavaScript (ES6+), HTML5, CSS3.
+- **Key Features:** Typing speed challenge, Memory card game, Rock Paper Scissors, Number Guessing, Whack-a-Mole.
+- **Links:** [Live Demo](https://revou-fsse-feb26.github.io/milestone-2-Kevin12er/), [GitHub](https://github.com/Revou-FSSE-Feb26/milestone-2-Kevin12er.git)
